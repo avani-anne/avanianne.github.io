@@ -1,62 +1,40 @@
-/* Fonts & layout */
-body {
-  font-family: "Helvetica Neue", Calibri, sans-serif;
-  margin: 0;
-  background: #ffffff; /* white background */
-  color: #222;         /* dark text for readability */
-  line-height: 1.6;
+/* Header container */
+.header {
+  background: #ffffff;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
 }
 
-/* Header */
-header.header {
-  text-align: left;        /* Align everything left */
-  margin: 50px 0 20px 40px; /* Add some left margin */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* name left, nav right */
+  align-items: center;            /* vertically centered */
 }
 
-header .profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 0 15px 0; /* left-aligned */
-}
-
-header h1 {
-  margin: 0;
+/* Name */
+.header h1 {
   font-size: 2.5rem;
-  color: #111; /* darker black */
+  margin: 0;
+  color: #111;
 }
 
-header .subtitle {
-  font-size: 1rem;
-  color: #666; /* grey subtitle */
-  margin-top: 5px;
-}
-
-/* Navigation */
-nav {
-  text-align: left;        /* Align nav left */
-  background: #f5f5f5;     /* light grey background */
-  padding: 10px 40px;      /* padding left for alignment */
-  margin-bottom: 40px;
-}
-
-nav a {
-  color: #333;             /* dark links */
+/* Navigation links */
+.header nav a {
+  color: #333;
   text-decoration: none;
-  margin-right: 25px;
+  margin-left: 25px;
   font-weight: 500;
 }
 
-nav a:hover,
-nav a.active {
+.header nav a:hover,
+.header nav a.active {
   text-decoration: underline;
 }
 
-/* Main content */
+/* Main page content */
 main {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 0 40px;
 }
 
@@ -64,10 +42,23 @@ h2 {
   margin-top: 40px;
   border-bottom: 2px solid #eee;
   padding-bottom: 5px;
-  text-align: left;        /* left-align section headers */
 }
 
 /* Footer */
 footer {
-  text-align: left;        /* left-align footer text */
-  margin
+  text-align: left;
+  margin: 50px 0 50px 40px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Contact icons */
+.contact-icons a {
+  color: #333;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.contact-icons a:hover {
+  text-decoration: underline;
+}
