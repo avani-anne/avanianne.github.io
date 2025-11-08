@@ -12,627 +12,520 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.7;
-            color: #111;
-            background: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            color: #333;
         }
 
-        /* Header with Navigation */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px 20px 0;
-        }
-
-        .header-top {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            padding-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            font-size: 1.05rem;
-            opacity: 0.95;
-        }
-
-        /* Navigation Tabs */
-        nav {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-container {
-            max-width: 900px;
-            margin: 0 auto;
+        /* Header/Banner */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1.5rem 3rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
         }
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-menu li {
-            margin: 0;
-        }
-
-        .nav-menu a {
-            display: block;
-            padding: 15px 25px;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
+        .logo {
+            font-size: 1.2rem;
             font-weight: 500;
-            border-bottom: 3px solid transparent;
+            color: #000;
+            text-decoration: none;
         }
 
-        .nav-menu a:hover,
-        .nav-menu a.active {
-            background: rgba(255, 255, 255, 0.25);
-            border-bottom-color: white;
+        .nav-tabs {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-tabs button {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+            font-family: inherit;
+            position: relative;
+        }
+
+        .nav-tabs button:hover {
+            color: #000;
+        }
+
+        .nav-tabs button.active {
+            color: #000;
+        }
+
+        .nav-tabs button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #000;
         }
 
         /* Main Content */
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 50px 20px;
+        .main-content {
+            margin-top: 80px;
+            min-height: calc(100vh - 80px);
         }
 
-        section {
+        .page {
             display: none;
-            animation: fadeIn 0.5s;
+            animation: fadeIn 0.5s ease;
         }
 
-        section.active {
+        .page.active {
             display: block;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* About Section */
-        #about {
+        /* Home/About Page */
+        .home-page {
+            min-height: calc(100vh - 80px);
             display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        #about.active {
-            display: flex;
-        }
-
-        .profile-container {
-            flex-shrink: 0;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 10px;
+            align-items: center;
             justify-content: center;
-            margin-top: 20px;
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .home-content {
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .about-text h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            margin-left: auto;
+        }
+
+        /* Experience Page */
+        .experience-page {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .experience-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .experience-container h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .experience-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .experience-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .experience-box h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .experience-box .company {
+            color: #667eea;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .experience-box .date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-box ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-box li {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Projects Page */
+        .projects-page {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .projects-container h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-box {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .project-box h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .project-box p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #666;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Contact Page */
+        .contact-page {
+            padding: 4rem 2rem;
+            background: #f5f5f5;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .contact-container p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
-        .social-links a {
-            color: #667eea;
+        .contact-links a {
+            color: #000;
             text-decoration: none;
-            padding: 6px 16px;
-            border: 1.5px solid #667eea;
-            border-radius: 20px;
+            padding: 1rem 2rem;
+            border: 1px solid #000;
+            border-radius: 4px;
             transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-
-        .social-links a:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .about-content {
-            flex: 1;
-        }
-
-        .about-content p {
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .about-content a {
-            color: #667eea;
-            text-decoration: none;
-            border-bottom: 1px solid #667eea;
-        }
-
-        .about-content a:hover {
-            color: #764ba2;
-            border-bottom-color: #764ba2;
-        }
-
-        /* Section Titles */
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            font-weight: 600;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        /* Publications Section */
-        .publication-item {
-            margin-bottom: 35px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #ecf0f1;
-        }
-
-        .publication-item:last-child {
-            border-bottom: none;
-        }
-
-        .publication-item h3 {
-            font-size: 1.15rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            line-height: 1.5;
-            font-weight: 600;
-        }
-
-        .authors {
-            color: #555;
-            margin-bottom: 5px;
             font-size: 0.95rem;
         }
 
-        .authors strong {
-            font-weight: 600;
+        .contact-links a:hover {
+            background: #000;
+            color: #fff;
         }
 
-        .venue {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-        }
-
-        .publication-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-
-        .publication-links a {
-            color: #667eea;
-            text-decoration: none;
-            padding: 4px 14px;
-            border: 1.5px solid #667eea;
-            border-radius: 4px;
-            transition: all 0.3s;
-            font-size: 0.85rem;
-        }
-
-        .publication-links a:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 35px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #ecf0f1;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-item h3 {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .company {
-            color: #7f8c8d;
-            font-size: 1rem;
-            margin-bottom: 3px;
-        }
-
-        .date {
-            color: #95a5a6;
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
-
-        .experience-item ul {
-            margin-top: 12px;
-            padding-left: 20px;
-        }
-
-        .experience-item li {
-            margin-bottom: 8px;
-            color: #555;
-            font-size: 0.98rem;
-        }
-
-        /* Education Section */
-        .education-item {
-            margin-bottom: 30px;
-        }
-
-        .education-item h3 {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .institution {
-            color: #7f8c8d;
-            font-size: 1rem;
-            margin-bottom: 3px;
-        }
-
-        .education-details {
-            color: #95a5a6;
-            font-size: 0.9rem;
-        }
-
-        /* Projects Section */
-        .project-item {
-            margin-bottom: 35px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #ecf0f1;
-        }
-
-        .project-item:last-child {
-            border-bottom: none;
-        }
-
-        .project-item h3 {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .project-description {
-            color: #555;
-            margin-bottom: 10px;
-            font-size: 0.98rem;
-            line-height: 1.6;
-        }
-
-        .tech-stack {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .project-links a {
-            color: #667eea;
-            text-decoration: none;
-            padding: 4px 14px;
-            border: 1.5px solid #667eea;
-            border-radius: 4px;
-            transition: all 0.3s;
-            font-size: 0.85rem;
-        }
-
-        .project-links a:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background: #f8f9fa;
-            padding: 25px 20px;
-            text-align: center;
-            color: #7f8c8d;
-            margin-top: 60px;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            .nav-menu {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .nav-menu a {
-                padding: 12px 15px;
-                font-size: 0.9rem;
-            }
-
-            #about {
+            .header {
+                padding: 1rem 1.5rem;
                 flex-direction: column;
-                align-items: center;
+                gap: 1rem;
             }
 
-            .profile-img {
-                width: 180px;
-                height: 180px;
+            .nav-tabs {
+                gap: 1.5rem;
             }
 
-            .about-content {
+            .home-content {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .about-content p {
-                text-align: left;
+            .about-text h1 {
+                font-size: 2rem;
             }
 
-            h2 {
-                font-size: 1.6rem;
+            .profile-image {
+                margin: 0 auto;
+                max-width: 300px;
             }
 
-            main {
-                padding: 40px 15px;
+            .experience-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header with Name and Navigation -->
-    <header>
-        <div class="header-top">
-            <h1>Your Name</h1>
-            <p class="subtitle">PhD Student in Computer Science | University Name</p>
-        </div>
-        
-        <!-- Navigation Tabs -->
-        <nav>
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li><a href="#about" class="nav-link active">About</a></li>
-                    <li><a href="#publications" class="nav-link">Publications</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                </ul>
-            </div>
+    <header class="header">
+        <a href="#" class="logo" onclick="showPage('home'); return false;">Your Name</a>
+        <nav class="nav-tabs">
+            <button class="active" onclick="showPage('home')">Home</button>
+            <button onclick="showPage('experience')">Experience</button>
+            <button onclick="showPage('projects')">Projects</button>
+            <button onclick="showPage('contact')">Contact</button>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- About Section -->
-        <section id="about" class="active">
-            <div class="profile-container">
-                <img src="profile.jpg" alt="Your Name" class="profile-img">
-                <div class="social-links">
-                    <a href="mailto:aanne@g.hmc.edu">Email</a>
-                    <a href="https://github.com/avanianne">GitHub</a>
-                    <a href="https://linkedin.com/in/avani-anne">LinkedIn</a>
-                    <a href="cv.pdf">CV</a>
+    <main class="main-content">
+        <!-- Home/About Page -->
+        <div id="home" class="page active">
+            <section class="home-page">
+                <div class="home-content">
+                    <div class="about-text">
+                        <h1>Hi, I'm Your Name</h1>
+                        <h2>Software Engineer & Designer</h2>
+                        <p>I'm a passionate developer who loves creating beautiful, functional web experiences. With a keen eye for detail and a commitment to clean code, I bring ideas to life through elegant solutions.</p>
+                        <p>Currently working on innovative projects that blend technology with creative problem-solving. I enjoy learning new technologies and collaborating with teams to build meaningful products.</p>
+                        <p>When I'm not coding, you can find me exploring new places, reading, or experimenting with new recipes.</p>
+                    </div>
+                    <div class="profile-image">
+                        <span>Photo</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="about-content">
-                <p>
-                    Hi! I’m Avani:) I recently graduated from Harvey Mudd College with a BS in Physics and Computer Science. 
-                    I am particularly interested in the intersection of machine learning, data, physics, and science, 
-                    especially for social impact in climate and energy systems.  
-                </p>
-                <p>
-                    Paragraph #2
-                </p>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- Publications Section -->
-        <section id="publications">
-            <h2>Publications</h2>
-            
-            <div class="publication-item">
-                <h3>Hexagonal vortices enable faster colloidal crystal grain coarsening, Physical Review E (Vol. 110, No. 1)</h3>
-                <p class="authors"><strong>Helen K. Chaffee*, Eric Corona-Oceguera*, Chris G. Couto*, 
-                    Avani N. Anne, Elizabeth L. Rogers, Aaron L. Galper, Conor M. Floyd, Ananya Venkatachalam, 
-                    and Sharon J. Gerbode</strong>, Collaborator A, Collaborator B, Advisor Name</p>
-                <p class="venue">Conference on Neural Information Processing Systems (NeurIPS), 2024</p>
-                <div class="publication-links">
-                    <a href="paper.pdf">PDF</a>
-                    <a href="https://journals.aps.org/pre/abstract/10.1103/PhysRevE.110.014608">arXiv</a>
+        <!-- Experience Page -->
+        <div id="experience" class="page">
+            <section class="experience-page">
+                <div class="experience-container">
+                    <h2>Experience</h2>
+                    <div class="experience-grid">
+                        <div class="experience-box">
+                            <h3>Software Engineer</h3>
+                            <p class="company">Tech Company</p>
+                            <p class="date">June 2022 - Present</p>
+                            <ul>
+                                <li>Developed and maintained scalable web applications</li>
+                                <li>Collaborated with cross-functional teams to deliver features</li>
+                                <li>Improved application performance by 40%</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-box">
+                            <h3>Front-End Developer</h3>
+                            <p class="company">Digital Agency</p>
+                            <p class="date">Jan 2020 - May 2022</p>
+                            <ul>
+                                <li>Built responsive websites for diverse clients</li>
+                                <li>Implemented modern UI/UX designs</li>
+                                <li>Mentored junior developers</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience-box">
+                            <h3>Junior Developer</h3>
+                            <p class="company">Startup Inc.</p>
+                            <p class="date">Aug 2018 - Dec 2019</p>
+                            <ul>
+                                <li>Contributed to multiple product launches</li>
+                                <li>Learned modern development practices</li>
+                                <li>Participated in agile development process</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+        </div>
 
-            <div class="publication-item">
-                <h3>Deep Learning for Clinical Decision Support: A Systematic Review and Meta-Analysis</h3>
-                <p class="authors">Collaborator A, <strong>Your Name</strong>, Collaborator C, Advisor Name</p>
-                <p class="venue">Journal of the American Medical Informatics Association (JAMIA), 2024</p>
-                <div class="publication-links">
-                    <a href="paper2.pdf">PDF</a>
-                    <a href="https://doi.org/10.xxxx/jamia.2024.xxxxx">DOI</a>
+        <!-- Projects Page -->
+        <div id="projects" class="page">
+            <section class="projects-page">
+                <div class="projects-container">
+                    <h2>Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-box">
+                            <h3>E-Commerce Platform</h3>
+                            <p>A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard. Built to handle high traffic and provide seamless user experience.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+
+                        <div class="project-box">
+                            <h3>Task Management App</h3>
+                            <p>A collaborative task management application with real-time updates, team workspaces, and analytics. Designed for remote teams to stay organized and productive.</p>
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Tailwind</span>
+                            </div>
+                        </div>
+
+                        <div class="project-box">
+                            <h3>Weather Dashboard</h3>
+                            <p>An interactive weather dashboard that provides detailed forecasts, historical data, and personalized alerts. Features beautiful data visualizations and location-based recommendations.</p>
+                            <div class="project-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">API Integration</span>
+                                <span class="tag">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+        </div>
 
-            <div class="publication-item">
-                <h3>Interpretable AI for Healthcare: Bridging the Gap Between Accuracy and Explainability</h3>
-                <p class="authors"><strong>Your Name</strong>, Advisor Name</p>
-                <p class="venue">International Conference on Machine Learning (ICML), 2023</p>
-                <div class="publication-links">
-                    <a href="paper3.pdf">PDF</a>
-                    <a href="https://arxiv.org/abs/2023.xxxxx">arXiv</a>
-                    <a href="poster.pdf">Poster</a>
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <section class="contact-page">
+                <div class="contact-container">
+                    <h2>Get In Touch</h2>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com">Email</a>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                        <a href="https://github.com" target="_blank">GitHub</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="publication-item">
-                <h3>Neural Networks for Electronic Health Record Analysis: A Survey</h3>
-                <p class="authors"><strong>Your Name</strong>, Collaborator D</p>
-                <p class="venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2023</p>
-                <div class="publication-links">
-                    <a href="paper4.pdf">PDF</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-
-            <div class="experience-item">
-                <h3>Research Intern</h3>
-                <p class="company">Google Research | Mountain View, CA</p>
-                <p class="date">Summer 2024</p>
-                <ul>
-                    <li>Developed novel algorithms for large-scale healthcare data analysis</li>
-                    <li>Collaborated with cross-functional teams to deploy models in production</li>
-                    <li>Published research findings at NeurIPS 2024</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Graduate Research Assistant</h3>
-                <p class="company">Stanford AI Lab | Stanford, CA</p>
-                <p class="date">September 2022 - Present</p>
-                <ul>
-                    <li>Leading research projects on machine learning for precision health</li>
-                    <li>Mentoring undergraduate and master's students</li>
-                    <li>Teaching assistant for CS229: Machine Learning</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Research Intern</h3>
-                <p class="company">Microsoft Research | Redmond, WA</p>
-                <p class="date">Summer 2023</p>
-                <ul>
-                    <li>Built interpretable ML models for clinical applications</li>
-                    <li>Collaborated with physicians at partner hospitals</li>
-                    <li>Contributed to open-source healthcare AI tools</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Undergraduate Researcher</h3>
-                <p class="company">Brown University | Providence, RI</p>
-                <p class="date">January 2021 - May 2023</p>
-                <ul>
-                    <li>Conducted research on NLP for clinical text analysis</li>
-                    <li>Developed tools for automated medical coding</li>
-                    <li>Published work at EMNLP and JAMIA</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-
-            <div class="project-item">
-                <h3>HealthAI Toolkit</h3>
-                <p class="project-description">
-                    Open-source toolkit for applying machine learning to electronic health records. Includes preprocessing 
-                    utilities, pre-trained models, and evaluation frameworks. Used by researchers at 50+ institutions worldwide.
-                </p>
-                <p class="tech-stack"><strong>Tech:</strong> Python, PyTorch, Scikit-learn, Pandas, FHIR</p>
-                <div class="project-links">
-                    <a href="https://github.com/yourusername/healthai">GitHub</a>
-                    <a href="https://healthai-docs.com">Docs</a>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <h3>Clinical Note Analyzer</h3>
-                <p class="project-description">
-                    Natural language processing system for extracting structured information from clinical notes. 
-                    Achieves 95% accuracy on medical entity recognition and relation extraction tasks.
-                </p>
-                <p class="tech-stack"><strong>Tech:</strong> Python, Transformers, spaCy, FastAPI</p>
-                <div class="project-links">
-                    <a href="https://github.com/yourusername/note-analyzer">GitHub</a>
-                    <a href="https://demo.note-analyzer.com">Demo</a>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <h3>Patient Risk Stratification Dashboard</h3>
-                <p class="project-description">
-                    Interactive web application for visualizing patient risk scores and treatment recommendations. 
-                    Developed in collaboration with clinical partners at Stanford Health Care.
-                </p>
-                <p class="tech-stack"><strong>Tech:</strong> React, D3.js, Node.js, PostgreSQL</p>
-                <div class="project-links">
-                    <a href="https://github.com/yourusername/risk-dashboard">GitHub</a>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <h3>MedicalQA: Question Answering System</h3>
-                <p class="project-description">
-                    Question answering system trained on medical literature and clinical guidelines. Provides evidence-based 
-                    answers with citations to source documents.
-                </p>
-                <p class="tech-stack"><strong>Tech:</strong> Python, BERT, Elasticsearch, Flask</p>
-                <div class="project-links">
-                    <a href="https://github.com/yourusername/medicalqa">GitHub</a>
-                    <a href="paper.pdf">Paper</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-
-            <div class="education-item">
-                <h3>PhD in Computer Science, 2028 (expected)</h3>
-                <p class="institution">Stanford University</p>
-                <p class="education-details">Advisor: Prof. James Zou | Stanford Graduate Fellowship, NSF GRFP</p>
-            </div>
-
-            <div class="education-item">
-                <h3>BS in Computer Science, 2023</h3>
-                <p class="institution">Brown University</p>
-                <p class="education-details">GPA: 4.0/4.0 | Magna Cum Laude | Phi Beta Kappa</p>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-
     <script>
-        // Tab navigation
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections
+        function showPage(pageName) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Update active tab
+            const tabs = document.querySelectorAll('.nav-tabs button');
+            tabs.forEach((tab, index) => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
