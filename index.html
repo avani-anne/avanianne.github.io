@@ -12,10 +12,14 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Times New Roman', Times, serif;
             background: #f5f5f5;
             color: #333;
             scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
         }
 
         /* Header/Banner */
@@ -58,70 +62,6 @@
             color: #000;
         }
 
-        /* Awards Section */
-        .awards-section {
-            background: white;
-        }
-
-        .awards-container {
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .awards-container h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 3rem;
-            text-align: center;
-            letter-spacing: -1px;
-            color: #000;
-        }
-
-        .awards-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .award-box {
-            background: #f5f5f5;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .award-box:hover {
-            transform: translateX(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .award-box h3 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            color: #000;
-        }
-
-        .award-box .organization {
-            color: #667eea;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .award-box .date {
-            color: #999;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .award-box p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
         /* Main Content */
         .main-content {
             margin-top: 80px;
@@ -137,7 +77,7 @@
 
         /* Home/About Section */
         .home-section {
-            background: white;
+            background: #e8f4f8;
         }
 
         .home-content {
@@ -171,20 +111,19 @@
         }
 
         .profile-photo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .profile-pic {
-        width: 180px;              /* smaller size */
-        height: 180px;             /* keep it square */
-        object-fit: cover;         /* crop nicely */
-        border-radius: 50%;        /* makes it circular */
-        border: 3px solid #e0e0e0; /* subtle border */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
         /* Experience Section */
         .experience-section {
@@ -231,6 +170,13 @@
             color: #000;
         }
 
+        .experience-box h4 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
         .experience-box .company {
             color: #667eea;
             font-size: 1rem;
@@ -247,18 +193,21 @@
         .experience-box ul {
             margin-top: 1rem;
             padding-left: 1.5rem;
+            color: #000;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .experience-box li {
-            color: #666;
+            color: #000;
             line-height: 1.6;
             font-size: 0.95rem;
             margin-bottom: 0.5rem;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         /* Projects Section */
         .projects-section {
-            background: white;
+            background: #e8f4f8;
         }
 
         .projects-container {
@@ -302,10 +251,11 @@
         }
 
         .project-box p {
-            color: #666;
+            color: #000;
             line-height: 1.6;
             font-size: 0.95rem;
             margin-bottom: 1rem;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .project-tags {
@@ -322,6 +272,144 @@
             font-size: 0.85rem;
             color: #666;
             border: 1px solid #e0e0e0;
+        }
+
+        /* Presentations Section */
+        .presentations-section {
+            background: #f5f5f5;
+        }
+
+        .presentations-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .presentations-container h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .presentations-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .presentation-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .presentation-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .presentation-box h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .presentation-box p {
+            color: #000;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .presentation-box strong {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .presentation-box a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .presentation-box a:hover {
+            text-decoration: underline;
+        }
+
+        .presentation-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        /* Awards Section */
+        .awards-section {
+            background: #e8f4f8;
+        }
+
+        .awards-container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .awards-container h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+            color: #000;
+        }
+
+        .awards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .award-box {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .award-box:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .award-box h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        .award-box .organization {
+            color: #667eea;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .award-box .date {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .award-box p {
+            color: #000;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         /* Contact Section */
@@ -407,6 +495,10 @@
             .award-box:hover {
                 transform: translateY(-5px);
             }
+
+            .presentation-box:hover {
+                transform: translateY(-5px);
+            }
         }
     </style>
 </head>
@@ -417,6 +509,7 @@
             <a href="#home">Home</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#presentations">Publications</a>
             <a href="#awards">Awards</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -428,7 +521,7 @@
             <div class="home-content">
                 <div class="about-text">
                     <h1>Welcome!</h1>
-                    <p>Hi! I’m Avani :) I recently graduated from Harvey Mudd College with a BS in Physics and Computer Science. 
+                    <p>Hi! I'm Avani :) I recently graduated from Harvey Mudd College with a BS in Physics and Computer Science. 
                         I am particularly interested in the intersection of machine learning, data, physics, and science, 
                         especially for social impact in climate and energy systems.</p>
                 </div>
@@ -442,62 +535,60 @@
         <section id="experience" class="section experience-section">
             <div class="experience-container">
                 <h2>Experience</h2>
-                    <h3>Research</h3>
-                    <div class="experience-list">
-                        <div class="experience-box">
-                            <h4>Undergraduate Research Intern</h4>
-                            <p class="company">FICUS Lab</p>
-                            <p class="date">Sept 2023 – Aug 2025</p>
-                            <ul> 
-                                My research focused on improving the interpretability of long-short term memory models (LSTM) used to 
-                                predict ozone levels, and on evaluating the effectiveness of the Explainable AI (XAI) 
-                                technique Layerwise Relevance Propagation (LRP).
-                            </ul>
+                <h3>Research</h3>
+                <div class="experience-list">
+                    <div class="experience-box">
+                        <h4>Undergraduate Research Intern</h4>
+                        <p class="company">FICUS Lab</p>
+                        <p class="date">Sept 2023 – Aug 2025</p>
+                        <ul> 
+                            My research focused on improving the interpretability of long-short term memory models (LSTM) used to 
+                            predict ozone levels, and on evaluating the effectiveness of the Explainable AI (XAI) 
+                            technique Layerwise Relevance Propagation (LRP).
+                        </ul>
                     </div>
 
                     <div class="experience-box">
-                            <h4>Undergraduate Research Intern</h4>
-                            <p class="company">Gerbode Soft Matter Physics Lab</p>
-                            <p class="date">Sept 2023 – Aug 2025</p>
-                            <ul>
-                                I employed experimental techniques, developed a program to track cooperative motion among particles 
-                                (a procedure during which particles follow each other as they move), and wrote scripts in 
-                                collaboration with other lab members to compare cooperative motion and vorticity to 
-                                understand the underlying granule dissolution process. 
-                                Through my work, I presented at the American Physical Society's March Meeting, co-authored a paper in American Physical Society, 
-                                and gave two poster presentations at the HMC Research Symposium. 
-                                
- </li>
-                            </ul>
+                        <h4>Undergraduate Research Intern</h4>
+                        <p class="company">Gerbode Soft Matter Physics Lab</p>
+                        <p class="date">Sept 2023 – Aug 2025</p>
+                        <ul>
+                            I employed experimental techniques, developed a program to track cooperative motion among particles 
+                            (a procedure during which particles follow each other as they move), and wrote scripts in 
+                            collaboration with other lab members to compare cooperative motion and vorticity to 
+                            understand the underlying granule dissolution process. 
+                            Through my work, I presented at the American Physical Society's March Meeting, co-authored a paper in American Physical Society, 
+                            and gave two poster presentations at the HMC Research Symposium. 
+                        </ul>
                     </div>
 
                     <div class="experience-box">
-                            <h4>Team Lead & Clinic Intern</h4>
-                            <p class="company">LS Power</p>
-                            <p class="date">Aug 2024 – May 2025</p>
-                            <ul>
-                                <li> 
-                                    I led a team of 6 to optimize the gas-capture process of methane at a landfill-to-renewable gas purification plant through analysis of landfill sensor data. 
-                                    I developed a pipeline to identify problematic sensors that involved features like data processing, 
-                                    statistical process control, feature engineering, and machine learning. 
-                                    My work resulted in the team being able to predict broken sensors up to a week in advance. 
-                                    As team lead, I also organized communication between students, professors, LS Power liaisons, 
-                                    and landfill site technicians.  </li>
-                            </ul>
+                        <h4>Team Lead & Clinic Intern</h4>
+                        <p class="company">LS Power</p>
+                        <p class="date">Aug 2024 – May 2025</p>
+                        <ul>
+                            <li> 
+                                I led a team of 6 to optimize the gas-capture process of methane at a landfill-to-renewable gas purification plant through analysis of landfill sensor data. 
+                                I developed a pipeline to identify problematic sensors that involved features like data processing, 
+                                statistical process control, feature engineering, and machine learning. 
+                                My work resulted in the team being able to predict broken sensors up to a week in advance. 
+                                As team lead, I also organized communication between students, professors, LS Power liaisons, 
+                                and landfill site technicians.
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="experience-box">
-                            <h4>Software Engineering Intern</h4>
-                            <p class="company">SpaceX</p>
-                            <p class="date">May 2024 – Aug 2024</p>
-                            <ul>
-                                <li> 
-                                    I improved the efficiency of coupled loads analysis code through reimplementation and enhancement of MATLAB 
-                                    code in C++. Additionally, I developed multiple classes in C++ to model physical forces 
-                                    and integrated them with a modal solver.
-    
-                                </li>
-                            </ul>
+                        <h4>Software Engineering Intern</h4>
+                        <p class="company">SpaceX</p>
+                        <p class="date">May 2024 – Aug 2024</p>
+                        <ul>
+                            <li> 
+                                I improved the efficiency of coupled loads analysis code through reimplementation and enhancement of MATLAB 
+                                code in C++. Additionally, I developed multiple classes in C++ to model physical forces 
+                                and integrated them with a modal solver.
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="experience-box">
@@ -508,85 +599,88 @@
                             <li> 
                                 Created machine learning pipeline with multilabel binarizers to enhance user safety for AI-powered wearable glasses
                                 Designed a verification framework to evaluate LLM text reading, using OCR and transformer-based models
-                            
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                        
-                        
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="projects-container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <!-- Add your projects here -->
                 </div>
             </div>
         </section>
 
         <!-- Presentations and Publications Section -->
-<section id="presentations" class="section presentations-section">
-    <div class="presentations-container">
-        <h2>Presentations & Publications</h2>
-        <div class="presentations-grid">
+        <section id="presentations" class="section presentations-section">
+            <div class="presentations-container">
+                <h2>Presentations & Publications</h2>
+                <div class="presentations-grid">
 
-            <!-- Publication -->
-            <div class="presentation-box">
-                <h3>Hexagonal vortices enable faster colloidal crystal grain coarsening</h3>
-                <p><strong>H. Chaffee</strong>, E. Corona, <strong>A. Anne</strong>, C. G. Couto, E. L. Rogers, A. L. Galper, C. M. Floyd, A. Venkatachalam, S. J. Gerbode.  
-                <em>Physical Review E</em>, Vol. 110, No. 1, 2024.  
-                This paper investigates how collective vortex dynamics accelerate coarsening in colloidal crystal systems.</p>
-                <div class="presentation-tags">
-                    <span class="tag">Colloidal Crystals</span>
-                    <span class="tag">Soft Matter</span>
-                    <span class="tag">Experimental Physics</span>
+                    <!-- Publication -->
+                    <div class="presentation-box">
+                        <h3>Hexagonal vortices enable faster colloidal crystal grain coarsening</h3>
+                        <p><strong>H. Chaffee</strong>, E. Corona, <strong>A. Anne</strong>, C. G. Couto, E. L. Rogers, A. L. Galper, C. M. Floyd, A. Venkatachalam, S. J. Gerbode.  
+                        <em>Physical Review E</em>, Vol. 110, No. 1, 2024.  
+                        This paper investigates how collective vortex dynamics accelerate coarsening in colloidal crystal systems.</p>
+                        <div class="presentation-tags">
+                            <span class="tag">Colloidal Crystals</span>
+                            <span class="tag">Soft Matter</span>
+                            <span class="tag">Experimental Physics</span>
+                        </div>
+                    </div>
+
+                    <!-- Talk -->
+                    <div class="presentation-box">
+                        <h3>Cooperative motion and granule rotation during rapid grain shrinking in colloidal crystals</h3>
+                        <p><strong>Avani Anne</strong>, Eric Corona, Helen K. Chaffee, Chris G. Couto, Elizabeth L. Rogers, Aaron L. Galper, Conor M. Floyd, Ananya Venkatachalam, Sharon J. Gerbode.  
+                        <em>APS March Meeting 2024</em>, Friday, March 8, 1:18 PM – 1:30 PM.  
+                        Presented results on cooperative dynamics and rotational motion in colloidal systems undergoing rapid structural evolution.</p>
+                        <div class="presentation-tags">
+                            <span class="tag">APS March Meeting</span>
+                            <span class="tag">Soft Condensed Matter</span>
+                            <span class="tag">Dynamics</span>
+                        </div>
+                    </div>
+
+                    <!-- Poster -->
+                    <div class="presentation-box">
+                        <h3>Modeling Energy Flows in Complex Systems</h3>
+                        <p><strong>Georgia Klein, Avani Anne, Sarah Kavassalis (PI)</strong>, et al.  
+                        <em>AGU Fall Meeting 2023</em>, Poster Presentation.  
+                        <a href="https://static1.squarespace.com/static/62c89ac188bea71ee536bd7f/t/65b686efc0bd2834e02b3532/1706460916398/Georgia_AGU2023_final.pdf" target="_blank">[View Poster]</a>
+                        </p>
+                        <div class="presentation-tags">
+                            <span class="tag">Climate</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data</span>
+                        </div>
+                    </div>
+
+                    <!-- Awards/Honors -->
+                    <div class="presentation-box">
+                        <h3>Academic Honors</h3>
+                        <p><strong>Graduated with High Distinction</strong></p>
+                        <p><strong>Departmental Honors in Computer Science</strong></p>
+                        <p><strong>Departmental Honors in Physics</strong></p>
+                        <p><strong>Departmental Honors in Humanities, Social Science, and the Arts</strong></p>
+                        <p><strong>Physics Community Award</strong></p>
+                    </div>
+
                 </div>
             </div>
-
-            <!-- Talk -->
-            <div class="presentation-box">
-                <h3>Cooperative motion and granule rotation during rapid grain shrinking in colloidal crystals</h3>
-                <p><strong>Avani Anne</strong>, Eric Corona, Helen K. Chaffee, Chris G. Couto, Elizabeth L. Rogers, Aaron L. Galper, Conor M. Floyd, Ananya Venkatachalam, Sharon J. Gerbode.  
-                <em>APS March Meeting 2024</em>, Friday, March 8, 1:18 PM – 1:30 PM.  
-                Presented results on cooperative dynamics and rotational motion in colloidal systems undergoing rapid structural evolution.</p>
-                <div class="presentation-tags">
-                    <span class="tag">APS March Meeting</span>
-                    <span class="tag">Soft Condensed Matter</span>
-                    <span class="tag">Dynamics</span>
-                </div>
-            </div>
-
-            <!-- Poster -->
-            <div class="presentation-box">
-                <h3>Modeling Energy Flows in Complex Systems</h3>
-                <p><strong>Georgia Klein, Avani Anne, Sarah Kavassalis (PI) </strong>, et al.  
-                <em>AGU Fall Meeting 2023</em>, Poster Presentation.  
-                <a href="https://static1.squarespace.com/static/62c89ac188bea71ee536bd7f/t/65b686efc0bd2834e02b3532/1706460916398/Georgia_AGU2023_final.pdf" target="_blank">[View Poster]</a>
-                </p>
-                <div class="presentation-tags">
-                    <span class="tag">Climate</span>
-                    <span class="tag">Machine Learning</span>
-                    <span class="tag">Data</span>
-                </div>
-            </div>
-
-            <!-- Awards/Honors -->
-            <div class="presentation-box">
-                <h3>Modeling Energy Flows in Complex Systems</h3>
-                <p><strong>Graduated with High Distinction</strong>, et al. 
-                <p><strong>Departmental Honors in Computer Science </strong>, et al. 
-                <p><strong>Departmental Honors in Physics </strong>, et al.  
-                <p><strong>Departmental Honors in Hummanities, Social Science, and the Arts </strong>, et al. 
-                <p><strong>Physics Community Award</strong>, et al.
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
+        </section>
 
         <!-- Extracurriculars Section -->
         <section id="awards" class="section awards-section">
             <div class="awards-container">
                 <h2>Awards & Recognition</h2>
                 <div class="awards-list">
-                
 
                     <div class="award-box">
                         <h3>Physics Tutor</h3>
@@ -606,7 +700,7 @@
                         <h3>The Muddraker (college newspaper)</h3>
                         <p class="organization">Tech Conference 2024</p>
                         <p class="date">Aug 2022 - May 2025</p>
-                        <p>Co-editor-in-chief, Senior Advisor </p>
+                        <p>Co-editor-in-chief, Senior Advisor</p>
                     </div>
 
                     <div class="award-box">
