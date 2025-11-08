@@ -170,19 +170,21 @@
             margin-bottom: 1.5rem;
         }
 
-        .profile-image {
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
-            margin-left: auto;
-        }
+        .profile-photo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .profile-pic {
+        width: 180px;              /* smaller size */
+        height: 180px;             /* keep it square */
+        object-fit: cover;         /* crop nicely */
+        border-radius: 50%;        /* makes it circular */
+        border: 3px solid #e0e0e0; /* subtle border */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
 
         /* Experience Section */
         .experience-section {
@@ -425,13 +427,13 @@
         <section id="home" class="section home-section">
             <div class="home-content">
                 <div class="about-text">
-                    <h1>Welcome! </h1>
-                    <p>Hi! I’m Avani:) I recently graduated from Harvey Mudd College with a BS in Physics and Computer Science. 
+                    <h1>Welcome!</h1>
+                    <p>Hi! I’m Avani :) I recently graduated from Harvey Mudd College with a BS in Physics and Computer Science. 
                         I am particularly interested in the intersection of machine learning, data, physics, and science, 
                         especially for social impact in climate and energy systems.</p>
                 </div>
-                <div class="Photo">
-                    <img src="/IMG_6519.jpg" alt="Avani Anne" />
+                <div class="profile-photo">
+                    <img src="IMG_6519.jpg" alt="Avani Anne" class="profile-pic">
                 </div>
             </div>
         </section>
