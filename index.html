@@ -418,12 +418,14 @@
                 <div class="about-text">
                     <h1>Welcome!</h1>
                     <p>Hi! I'm Avani :) I recently graduated from Harvey Mudd College with a BS in Physics and Computer Science.
-                        I am interested in the intersection of machine learning, data, modelling, physics, and science, especially in climate and energy systems. 
+                        I am interested in the intersection of machine learning, data, modeling, physics, and science, especially in climate and energy systems. 
+                        </p>
+                        <p> 
                         During my undergrad, I worked in the Gerbode Lab for Soft Matter Physics under Professor Sharon Gerbode and in the 
                         FICUS Lab (a computational climate lab) under Professor Sarah Kavassalis. I've also worked on my senior capstone project
                         with LS Power and as a Software Engineering Intern at SpaceX. I'm currently working as an Analyst at Aurora Energy Research 
-                        and on the Machine Learning Team at ExploraVist, an early-stage startup developing AI-powered glasses. I'm enthusiastic for 
-                        bringing my passion for social impact into my future interdisciplinary work. 
+                        and on the Machine Learning Team at ExploraVist, an early-stage startup developing AI-powered glasses. I'm enthusiastic to 
+                        bring my passion for social impact into my future interdisciplinary work. 
                         </p>
                         <p> 
                         In my free time, I love being outdoors, singing, reading, both journaling & journalism, 
@@ -446,32 +448,39 @@
                 <h3>Research</h3>
                 <div class="experience-list">
                     <div class="experience-box">
-                        <h4>Undergraduate Research Intern</h4>
-                        <p class="company"><a href="https://www.ficus.space/">[FICUS lab]</a>, PI: Professor Sarah Kavassalis</p>
+                        <h4>Undergraduate Research Intern, <a href="https://www.ficus.space/">FICUS lab</a></h4>
+                        <p class="company">PI: Professor Sarah Kavassalis</p>
                         <p class="date">Sept 2023 – Aug 2025</p>
                         <ul> 
-                            This led me to join the FICUS Lab, where I was exposed 
-                            to the intersection of climate and computation. My research focused on improving the 
-                            interpretability of long short-term memory models (LSTM) used to predict ozone levels, 
-                            and on evaluating the effectiveness of the explainable AI (XAI) technique layerwise 
-                            relevance propagation (LRP). I processed and restructured air quality datasets to address 
-                            inconsistencies in prior work. I also used several python libraries like Pandas, TensorFlow, 
-                            and SHAP to analyze LRP results across multiple LSTM initializations, diurnal and seasonal cycles, 
-                            and in comparison with random forest baselines. 
+                            The FICUS Lab's research focuses on flexible, interdisciplinary computational approaches for understanding the atmosphere.
+
+                            I studied the interpretability of long short-term memory models (LSTM) used to predict ozone levels, 
+                            and evaluated the effectiveness of the explainable AI (XAI) technique layerwise relevance propagation (LRP). 
+                            I processed and restructured air quality datasets. 
+                            I also tuned LSTM hyperparameters for optimal prediction of ozone. 
+                            I analyzed results across multiple LSTM initializations, diurnal and seasonal cycles, 
+                            and compared against random forest baselines (using libraries like Pandas & SHAP).
+
+
                         </ul>
                     </div>
 
                     <div class="experience-box">
                         <h4>Undergraduate Research Intern</h4>
-                        <p class="company">Gerbode Soft Matter Physics Lab, PI: Professor Sharon Gerbode</p>
+                        <p class="company">Gerbode Lab for Soft Matter Physics, PI: Professor Sharon Gerbode</p>
                         <p class="date">Jan 2022 – March 2024</p>
                         <ul>
-                            As an undergraduate research intern, I studied the fundamental mechanisms that influence aging in small crystals. 
-                            I developed several scripts analyzing the properties of granule dissolution like cooperative motion, vorticity, 
+                            The Gerbode Lab for Soft Matter Physics focuses on understanding the fundamental mechanisms that influence aging in small crystals. 
+                            I specifically studied grain boundaries, which are a property of small crystals responsible for determining many bulk material properties, which can have applications in materials like photovoltaics. 
+                            Despite the well-known importance of grain boundaries, the established theories that describe how grain boundaries move, were developed for large crystals in the continuum limit.
+                            As technology pushes us toward smaller and smaller systems, we need a better understanding of the atomic scale mechanisms that enable grain boundary motion in smaller crystals. 
+
+                            
+                            During my research in this lab, I developed several scripts analyzing the properties of granule dissolution like cooperative motion, vorticity, 
                             and misorientation angle. I successfully found that the size of rotating granules during vorticity was inversely 
                             related to misorientation angle, like the underlying Moiré pattern in the crystal lattice. I’ve also successfully 
                             identified cooperative motion, a mechanism where particles follow each other as they move, as a signature of dissolution. 
-                            I’ve also created ramp cells (plates of colloidal particles) and employed optical blasting to create grain boundaries 
+                            My work also involved creating ramp cells (plates of colloidal particles) and employing optical blasting to create grain boundaries 
                             for physical observation. Furthermore, I co-authored a peer-reviewed American Physical Society (APS) publication, 
                             and presenting a talk at the APS March Meeting in 2024. 
                         </ul>
@@ -484,11 +493,10 @@
                         <p class="company">ExploraVist</p>
                         <p class="date">June 2025 – Present</p>
                         <ul>
-                            I am on the machine learning (ML) team at ExploraVist, an early-stage startup creating AI-powered glasses 
-                            to assist the visually impaired community. I’ve created an ML pipeline with multilabel binarizers 
-                            to enhance user safety for AI-powered wearable glasses. I’ve also designed a verification 
-                            framework to evaluate LLM text reading using OCR and transformer-based models. 
-
+                            I’m a machine learning (ML) engineer at ExploraVist, an early-stage startup creating AI-powered glasses to assist the visually impaired community. 
+                            I’ve worked on classifying the safety of user queries. To do this, I built a dataset of queries, then used transformer-based embeddings to encode the data, 
+                            and multilabel classification to label new prompts as “safe” or “unsafe.” I’ve also designed a verification framework to evaluate LLM text reading, 
+                            like developing benchmarking techniques (checking accuracy of words and phrases detected). 
                         </ul>
                     </div>
 
@@ -516,7 +524,7 @@
                         <li>
                             View my capstone poster: 
                             <a href="https://github.com/avani-anne/my-portfolio/raw/main/LS%20Power%20Harvey%20Mudd%20Clinic%20Poster%202024-25%20-%20FINAL.pdf" target="_blank">
-                                [PDF Poster]
+                                Projects Day Poster
                             </a>
                         </li>
                     </ul>
@@ -529,10 +537,12 @@
                         <p class="company">SpaceX</p>
                         <p class="date">May 2024 – Aug 2024</p>
                         <ul>
-                        	As a software engineering intern on the dynamics team, I collaborated in a multi-developer production environment to 
-                            improve the efficiency of coupled loads analysis. I worked in a Linux/Git system to reimplement and enhance MATLAB code in C++. 
-                            I developed and integrated multiple classes in C++ to model physical forces (like thrust, and positional force), 
-                            and worked to enhance the accuracy of modal solvers. I also created units tests using Pytest to ensure accuracy of results. 
+                        	As a software engineering intern on the dynamics team, 
+                            I collaborated in a multi-developer production environment to improve the efficiency of coupled loads analysis. 
+                            I worked in a Linux/Git system to reimplement and enhance MATLAB code in C++. I developed and integrated multiple 
+                            classes in C++ to model physical forces (like thrust, and positional force), and worked to enhance the accuracy 
+                            of modal solvers. I also created units tests using Pytest to ensure accuracy of results. 
+
                         </ul>
                     </div>
                 </div>
